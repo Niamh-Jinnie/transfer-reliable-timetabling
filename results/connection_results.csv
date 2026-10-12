@@ -1,0 +1,21 @@
+policy,connection_id,origin,transfer_station,station_group,passengers,base_slack,extra_buffer,success_probability,expected_missed_passengers
+current_timetable,C1,Glasgow Central,Manchester Piccadilly,hub,120,4,0,0.44999999999999996,66.0
+current_timetable,C2,Glasgow Queen Street,Edinburgh Waverley,hub,90,5,0,0.75,22.5
+current_timetable,C3,Stirling,Edinburgh Waverley,regional,45,2,0,0.44999999999999996,24.750000000000004
+current_timetable,C4,Perth,Edinburgh Waverley,regional,35,3,0,0.44999999999999996,19.25
+current_timetable,C5,Dundee,Edinburgh Waverley,regional,30,1,0,0.44999999999999996,16.5
+cost_priority,C1,Glasgow Central,Manchester Piccadilly,hub,120,4,1,0.75,30.0
+cost_priority,C2,Glasgow Queen Street,Edinburgh Waverley,hub,90,5,0,0.75,22.5
+cost_priority,C3,Stirling,Edinburgh Waverley,regional,45,2,0,0.44999999999999996,24.750000000000004
+cost_priority,C4,Perth,Edinburgh Waverley,regional,35,3,0,0.44999999999999996,19.25
+cost_priority,C5,Dundee,Edinburgh Waverley,regional,30,1,0,0.44999999999999996,16.5
+reliability_priority,C1,Glasgow Central,Manchester Piccadilly,hub,120,4,4,0.9299999999999999,8.4
+reliability_priority,C2,Glasgow Queen Street,Edinburgh Waverley,hub,90,5,4,0.9299999999999999,6.300000000000001
+reliability_priority,C3,Stirling,Edinburgh Waverley,regional,45,2,2,0.75,11.25
+reliability_priority,C4,Perth,Edinburgh Waverley,regional,35,3,2,0.75,8.75
+reliability_priority,C5,Dundee,Edinburgh Waverley,regional,30,1,0,0.44999999999999996,16.5
+fair_service,C1,Glasgow Central,Manchester Piccadilly,hub,120,4,4,0.9299999999999999,8.4
+fair_service,C2,Glasgow Queen Street,Edinburgh Waverley,hub,90,5,0,0.75,22.5
+fair_service,C3,Stirling,Edinburgh Waverley,regional,45,2,2,0.75,11.25
+fair_service,C4,Perth,Edinburgh Waverley,regional,35,3,2,0.75,8.75
+fair_service,C5,Dundee,Edinburgh Waverley,regional,30,1,3,0.75,7.5

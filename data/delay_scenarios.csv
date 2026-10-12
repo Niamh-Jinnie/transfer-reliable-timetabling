@@ -1,0 +1,6 @@
+scenario,probability,C1,C2,C3,C4,C5
+on_time,0.45,0,1,1,0,1
+minor_delay,0.30,5,4,4,5,4
+moderate_delay,0.18,8,9,7,8,6
+major_delay,0.07,14,12,11,13,10
+

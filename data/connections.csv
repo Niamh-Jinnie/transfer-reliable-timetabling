@@ -1,0 +1,7 @@
+connection_id,origin,transfer_station,destination,station_group,passengers,base_slack,max_extra_buffer
+C1,Glasgow Central,Manchester Piccadilly,Sheffield,hub,120,4,8
+C2,Glasgow Queen Street,Edinburgh Waverley,Sheffield,hub,90,5,8
+C3,Stirling,Edinburgh Waverley,Sheffield,regional,45,2,8
+C4,Perth,Edinburgh Waverley,Sheffield,regional,35,3,8
+C5,Dundee,Edinburgh Waverley,Sheffield,regional,30,1,8
+
