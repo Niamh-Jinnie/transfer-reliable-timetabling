@@ -64,12 +64,13 @@ On Windows, activate the environment with:
 python scripts/run_experiments.py
 ```
 
-The script compares four policies:
+The script compares five policies:
 
 - `current_timetable`: no additional buffer;
 - `cost_priority`: buffer is available but expensive;
 - `reliability_priority`: missed passengers receive greater weight;
-- `fair_service`: reliability is optimized together with the group fairness gap.
+- `fair_service`: reliability is optimized together with the group fairness gap;
+- `strong_fairness`: the fairness weight is doubled to examine the effect of a stronger equality preference.
 
 Generated results are written to:
 
@@ -86,6 +87,7 @@ Generated results are written to:
 | Cost priority | 1 | 113.0 | 25.0% | 55.0% | 30.0 pp |
 | Reliability priority | 12 | 51.2 | 7.0% | 33.2% | 26.2 pp |
 | Fair service | 11 | 58.4 | 14.7% | 25.0% | 10.3 pp |
+| Strong fairness | 8 | 80.0 | 25.0% | 25.0% | 0.0 pp |
 
 The reliability policy minimizes the passenger-weighted failure term and
 therefore directs more protection toward high-volume hub connections. Adding
@@ -93,6 +95,8 @@ the fairness term changes the allocation: three minutes are moved to the
 Dundee regional connection, reducing the hub-regional reliability gap from
 26.2 to 10.3 percentage points. The trade-off is 7.2 additional expected
 missed passengers relative to the reliability-only solution.
+
+Doubling the fairness weight to 300 eliminates the group gap, but it does so partly by reducing protection for the hub group. The model removes three buffer minutes from C1, total extra buffer falls to eight minutes, and expected missed passengers rise to 80.0. This illustrates a levelling-down limitation of the absolute-gap objective: equal group rates do not necessarily imply a better overall service outcome.
 
 ![Buffer allocation by policy](results/figures/buffer_allocation.png)
 
@@ -142,7 +146,3 @@ extensions include:
 - [Pyomo](https://www.pyomo.org/) for algebraic optimization modelling;
 - [HiGHS](https://highs.dev/) as the open-source MILP solver;
 - pandas and Matplotlib for data and result analysis.
-
-## License
-
-MIT

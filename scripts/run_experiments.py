@@ -47,6 +47,13 @@ POLICIES = [
         missed_passenger_cost=1,
         fairness_weight=150,
     ),
+    Policy(
+        name="strong_fairness",
+        buffer_budget=12,
+        buffer_cost=2,
+        missed_passenger_cost=1,
+        fairness_weight=300,
+    ),
 ]
 
 
